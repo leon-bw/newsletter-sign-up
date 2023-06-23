@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colours */
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+}
+
+body {
+    background: hsl(234, 29%, 20%);
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.container {
+    height: 100dvh;
+    display: grid;
+}
+
+.subscribe {
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* ----------
+    UTILITIES 
+---------- */
+
+.input--error {
+    background-color: hsl(4, 100%, 95%);
+    border: 1px solid var(--Tomato);
+    color: var(--Tomato);
+}
+
+.hidden,
+.mobile {
+    display: none;
+}
+
+
+/* ----------
+    CARD 
+---------- */
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: auto;
+    max-width: 55rem;
+    background: var(--White);
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.heading {
+    font-size: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: url('assets/images/icon-list.svg') no-repeat;
+    padding-left: 2rem;
+}
+
+h1, 
+p, 
+li {
+    margin-bottom: 1rem;
+}
+
+/* ----------
+    FORM 
+---------- */
+
+form {
+    margin-top: 2rem;
+    position: relative;
+}
+
+span,
+.card__label,
+.card__error {
+    font-weight: 700;
+}
+
+.card__error {
+    position: absolute;
+    right: 0;
+    color: var(--Tomato);
+    font-size: .8rem;
+}
+
+
+input {
+    margin: .313rem auto 1.5rem;
+    border: 1px solid var(--Grey);
+    text-indent: 1.5rem;
+}
+
+
+input, .btn {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.btn {
+    background: var(--Dark-Slate-Grey);
+    border: none;
+    color: var(--White);
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, hsl(347, 100%, 66%) 0%, hsl(4, 100%, 67%) 61%);
+}
+
+.btn:active {
+    background: linear-gradient(to right, hsl(347, 60%, 55%) 0%, hsl(4, 60%, 55%) 61%);
+}
+
+
+.btn:hover::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, hsl(347, 100%, 66%) 0%, hsl(4, 100%, 67%) 61%);
+    transform: translate3d(0px, 30px, 0) scale(.95);
+    filter: blur(35px);
+    opacity: var(0.6);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+/* ----------
+    IMAGE 
+---------- */
+
+img {
+    display: block; 
+    margin-right: 0;
+}
+
+/* ----------
+    THANK YOU 
+---------- */
+
+.--small {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 30rem;
+    padding: 3rem;
+}
+
+.--lh {
+    line-height: 1.1;
+}
+
+
+/* ----------
+    Footer 
+---------- */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a {
+    color: var(--Tomato);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: hsl(228, 45%, 44%);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+
+    .card {
+        grid-template-columns: 1fr;
+        border-radius: 0;
+        padding: 0;
+        width: auto;
+    }
+
+    .--small {
+        padding: 2rem;
+        height: 100dvh;
+        grid-template-rows: 1fr .5fr 2fr .5fr;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        width: 100%;
+        display: block;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .subscribe {
+        grid-row: 2/3;
+        padding: 0 2rem 2rem;
+    }
+
+    .attribution {
+        display: none;
+    }
+}

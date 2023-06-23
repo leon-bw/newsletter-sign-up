@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+
+  <div id="subscribe" class="container">
+
+    <main class="card">
+
+      <section class="subscribe">
+
+        <h1 class="heading">Stay Updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <form action="" class="card__form">
+          <small for="" class="card__label">Email Address</small>
+          <span class="card__error hidden">error</span>
+          <input id="email" type="email" name="email" placeholder="email@company.com">
+          <button type="submit" class="btn">Subscribe to monthly newsletter</button>
+        </form>
+
+      </section>
+      
+      <img class="desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="hero desktop">
+      <img class="mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="hero mobile">
+
+    </main>
+
+  </div>
+
+  <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <div  id="success" class="container hidden">
+      
+      <div class="card --small">
+        <img src="assets/images/icon-success.svg" alt="success">
+        <h1 class="heading --lh">Thanks for Subscribing!</h1>
+        <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+        <button id='dismiss' class="btn">Dismiss message</button>
+      </div>
+
+    </div>
+
+    <!-- Success message end -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/leon-bw">Leon Williams</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
