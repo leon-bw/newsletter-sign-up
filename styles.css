@@ -217,6 +217,7 @@ img {
 
     .card {
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
         border-radius: 0;
         padding: 0;
         width: auto;
