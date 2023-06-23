@@ -218,11 +218,11 @@ img {
         border-radius: 0;
         padding: 0;
         width: auto;
+        height: 100dvh;
     }
 
     .--small {
         padding: 2rem;
-        height: 100dvh;
         grid-template-rows: 1fr .5fr 2fr .5fr;
     }
 
